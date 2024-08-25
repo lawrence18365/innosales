@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://innoweb.designs/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innoweb Designs: Your Escape from Web Design Hell</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+        @font-face {
+            font-family: 'Futura PT Cond Extra Bold';
+            src: url('https://fonts.cdnfonts.com/css/futura-pt') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        :root {
+            --primary-color: #FF3366;
+            --secondary-color: #33CCFF;
+            --accent-color: #FFCC00;
+            --text-color: #FFFFFF;
+            --bg-color: #1A1A1A;
+            --light-gray: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Futura PT Cond Extra Bold', sans-serif;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            text-shadow: 3px 3px var(--primary-color);
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            border-bottom: 5px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 80px;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight {
+            background-color: var(--secondary-color);
+            color: var(--bg-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-family: 'Futura PT Cond Extra Bold', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-size: 1.8rem;
+            margin: 20px 0;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+
+        .testimonial {
+            background-color: var(--light-gray);
+            border-left: 10px solid var(--secondary-color);
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-radius: 0 20px 20px 0;
+            text-align: left;
+        }
+
+        .package {
+            background-color: var(--light-gray);
+            border-radius: 30px;
+            padding: 60px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .package h3 {
+            color: var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        .package ul {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .package li {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.6rem;
+        }
+
+        .package li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 2rem;
+        }
+
+        .cta {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .cta .btn {
+            font-size: 2rem;
+            padding: 25px 50px;
+        }
+
+        .guarantee {
+            background-color: var(--light-gray);
+            border-radius: 30px;
+            padding: 50px;
+            margin-top: 80px;
+        }
+
+        .guarantee h3 {
+            color: var(--accent-color);
+        }
+
+        .bg-image {
+            background-image: url('https://source.unsplash.com/random/1600x900/?web,design');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            padding: 150px 0;
+        }
+
+        .bg-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .bg-image .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-container {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .text-highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .text-box {
+            background-color: rgba(51, 204, 255, 0.1);
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .email-signup {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .email-signup input[type="email"] {
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            width: 300px;
+            outline: none;
+        }
+
+        .email-signup button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .email-signup button:hover {
+            background-color: var(--primary-color);
+        }
+
+        .faq {
+            margin-top: 80px;
+            text-align: left;
+        }
+
+        .faq h2 {
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .faq-answer {
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .cta .btn {
+                font-size: 1.6rem;
+                padding: 20px 40px;
+            }
+
+            .email-signup input[type="email"] {
+                width: 200px;
+            }
+
+            .package {
+                padding: 30px;
+            }
+
+            .package li {
+                font-size: 1.4rem;
+            }
+
+            .testimonial {
+                padding: 20px;
+            }
+
+            .faq-question {
+                font-size: 1.4rem;
+            }
+
+            .faq-answer {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image">
+        <div class="container">
+            <header>
+                <h1>Innoweb Designs: Your Escape from Web Design Hell</h1>
+                <div class="email-signup">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Sign Up</button>
+                </div>
+                <a href="#package" class="btn">See Our Offer</a>
+            </header>
+
+            <main>
+                <p class="text-highlight">Dear frustrated business owner,</p>
+
+                <p>We get it.</p>
+
+                <p>Running a business online is hard. <span class="text-highlight">Really f*cking hard.</span></p>
+
+                <div class="image-container">
+                    <img src="https://source.unsplash.com/random/600x400/?frustrated,business" alt="Frustrated business owner looking at computer" width="600" height="400">
+                </div>
+
+                <p>You're probably staring at your website right now, wondering why it's not bringing in the floods of customers you were promised.</p>
+
+                <p>Stressed and sleeping like a caffeine-addicted coder on a deadline.</p>
+
+                <p>As your hair goes fifty shades of grey from all the tech jargon and "must-have" features you don't understand.</p>
+
+                <a href="#package" class="btn">Let Us Help</a>
+
+                <h2>The Digital Dilemma</h2>
+
+                <div class="text-box">
+                    <p>And to top it all off.</p>
+
+                    <p>You're being pulled in a bazillion different directions.</p>
+
+                    <p><strong>Ohmygawd!</strong></p>
+                </div>
+
+                <ul>
+                    <li>Should I redesign my site?</li>
+                    <li>Start an email list?</li>
+                    <li>Build a personal brand?</li>
+                    <li>Document my whole flippin' life on Instagram?</li>
+                    <li>What about AI chatbots?</li>
+                </ul>
+
+                <p>Errrrrrrbody's talkin' bout AI chatbots.</p>
+
+                <div class="image-container">
+                    <img src="https://source.unsplash.com/random/600x400/?technology,overwhelm" alt="Overwhelmed person surrounded by technology" width="600" height="400">
+                </div>
+
+                <h2>The Web Rats Nest</h2>
+
+                <p>Look, most business owners have a bad case of 'shiny website syndrome'...</p>
+
+                <p>Mixed with a scoop of "I need all the features"... and a sprinkle of "My nephew can build websites".</p>
+
+                <p>And they end up with a little bit of this... a little bit of that.</p>
+
+                <p>Soon, they're screaming at their beautiful but useless website with all the things they "have to" add.</p>
+
+                <div class="text-box">
+                    <p>We call this digital disaster a <span class="text-highlight">web rats nest</span>.</p>
+
+                    <p>Also known as <span class="text-highlight">online business hell</span>.</p>
+                </div>
+
+                <p>It's slow and buggy there.</p>
+
+                <p>And <em>we'd rather code in COBOL than build a website that way</em>.</p>
+
+                <a href="#package" class="btn">Escape the Rats Nest</a>
+
+                <h2>It's About You</h2>
+
+                <p>But this isn't about us... It's about you.</p>
+
+                <p>You're reading this right now because, in some way shape or form, your website isn't where you want it to be.</p>
+
+                <p>Or maybe your site looks great... but it's about as effective at generating leads as a chocolate teapot.</p>
+
+                <div class="image-container">
+                    <img src="https://source.unsplash.com/random/600x400/?success,business" alt="Successful business person celebrating" width="600" height="400">
+                </div>
+
+                <h2>You Want More</h2>
+
+                <ul>
+                    <li>More visitors.</li>
+                    <li>More leads.</li>
+                    <li><strong>More sales.</strong></li>
+                    <li>More marketing automation.</li>
+                    <li><span style="text-decoration: underline;"><strong>More time away from your computer.</strong></span></li>
+                </ul>
+
+                <p>More business-class flights with your spouse to places where "responsive" refers to the service, not your website.</p>
+
+                <p>Whatever it is for you...</p>
+
+                <p>It all starts by choosing to work with Innoweb Designs below...</p>
+
+                <p><strong>*cue angels singing*</strong></p>
+
+                <a href="#package" class="btn">Get Started Now</a>
+
+                <h2>Why Innoweb Designs?</h2>
+
+                <p>Because we're not just another pretty face in the world of web design.</p>
+
+                <p>We're the digital alchemists who turn "meh" websites into money-making machines.</p>
+<div class="image-container">
+                    <img src="https://source.unsplash.com/random/600x400/?web,design,success" alt="Successful web design project" width="600" height="400">
+                </div>
+
+                <p>Here's what you get when you join the Innoweb family:</p>
+
+                <ul>
+                    <li>A website that doesn't just sit there looking pretty, but actually brings in leads and sales (imagine that!)</li>
+                    <li>SEO magic that'll have Google eating out of your hand (or at least ranking you above your competitors)</li>
+                    <li>Copy that sells harder than a used car salesman on commission day</li>
+                    <li>User experience smoother than a freshly waxed Ferrari</li>
+                    <li>Support that's more reliable than your childhood teddy bear</li>
+                </ul>
+
+                <a href="#package" class="btn">Join the Innoweb Family</a>
+
+                <h2>But Don't Just Take Our Word For It...</h2>
+
+                <div class="testimonial">
+                    <p>"Since working with Innoweb Designs, my website has gone from digital wallflower to the belle of the online ball. Leads are pouring in faster than I can handle!" - Sarah J., Owner of Blooming Brilliant Florists</p>
+                </div>
+
+                <h2 id="package">Here's The Deal</h2>
+
+                <div class="package">
+                    <h3>Digital Domination Package</h3>
+                    <ul>
+                        <li>Custom, conversion-focused website design</li>
+                        <li>12 months of hosting faster than Usain Bolt on rocket skates</li>
+                        <li>SEO optimization that'll make Google swoon</li>
+                        <li>Copy that could sell ice to an Eskimo</li>
+                        <li>Monthly performance reports (in plain English, we promise)</li>
+                    </ul>
+                    <p>Normally, this package would set you back $10,000.</p>
+                    <p>But because we like you (and we're terrible at math), you can get it all for just <span class="highlight">$4,997</span>.</p>
+                    <a href="https://innoweb.designs/escape" class="btn">Claim Your Package Now</a>
+                </div>
+
+                <h2>But Wait, There's More!</h2>
+
+                <p>Act now (like, right now... yes, now), and we'll throw in:</p>
+
+                <ul>
+                    <li>Our "LinkedIn Lead Generation" course ($997 value)</li>
+                    <li>6 months of done-for-you social media content ($1,500 value)</li>
+                    <li>A virtual high-five from our entire team (priceless)</li>
+                </ul>
+
+                <div class="guarantee">
+                    <h3>Our "Make It Rain" Guarantee</h3>
+                    <p>If we don't at least double your website leads within 90 days, we'll work for free until we do. And if you're still not happy, we'll refund every penny and let you keep the website.</p>
+                    <p>(Yes, we're that confident. No, we're not insane. We're just really, really good at what we do.)</p>
+                </div>
+
+                <h2>Ready to Escape Web Design Hell?</h2>
+
+                <div class="cta">
+                    <a href="https://innoweb.designs/escape" class="btn">Yes! Beam Me Up, Innoweb!</a>
+                </div>
+
+                <p><strong>P.S.</strong> Still reading? Look, we get it. Making decisions is hard. But you know what's harder? Watching your competitors rake in all the online dough while your website collects more dust than leads. Don't let another day go by in web design purgatory. Click that button and let's turn your online presence into a lead-generating, sale-making, profit-pumping machine!</p>
+
+                <p><strong>P.P.S.</strong> This offer is like a cat video on the internet - it won't be around forever. We're only taking on 10 new clients this month, so if you want in, act now before all the spots are gone and you're left with... <em>shudder</em>... your current website.</p>
+
+                <div class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <p class="faq-question">Q: How long does it take to build a website with Innoweb Designs?</p>
+                        <p class="faq-answer">A: We typically complete projects within 4-6 weeks, depending on the complexity. But don't worry, we'll keep you updated every step of the way.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Q: Do I need to provide my own content?</p>
+                        <p class="faq-answer">A: While we can create content for you, we find that the best results come from a collaboration. We'll guide you through the process and make it as painless as possible.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Q: What if I need changes after the website is live?</p>
+                        <p class="faq-answer">A: We've got you covered! Our package includes a month of free revisions, and we offer ongoing support packages to keep your site fresh and fabulous.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Q: How does your SEO optimization work?</p>
+                        <p class="faq-answer">A: We use a combination of on-page SEO, technical optimization, and content strategy to boost your search engine rankings. It's like sprinkling magic SEO dust all over your site.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Q: Can you help with e-commerce websites?</p>
+                        <p class="faq-answer">A: Absolutely! We're pros at creating e-commerce sites that not only look great but convert browsers into buyers faster than you can say "cha-ching!"</p>
+                    </div>
+                </div>
+
+                <div class="cta">
+                    <h2>Ready to Transform Your Online Presence?</h2>
+                    <a href="https://innoweb.designs/escape" class="btn">Let's Get Started!</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation to CTA buttons
+        const ctaButtons = document.querySelectorAll('.btn');
+        ctaButtons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = 'translateY(-5px) scale(1.05)';
+                button.style.boxShadow = '0 15px 30px rgba(0,0,0,0.4)';
+                button.style.transition = 'all 0.3s ease';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'translateY(0) scale(1)';
+                button.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+            });
+        });
+
+        // Add countdown timer
+        const countdownElement = document.createElement('div');
+        countdownElement.style.textAlign = 'center';
+        countdownElement.style.marginTop = '30px';
+        countdownElement.style.fontSize = '2rem';
+        countdownElement.style.fontWeight = 'bold';
+        countdownElement.style.color = 'var(--accent-color)';
+        document.querySelector('.cta').appendChild(countdownElement);
+
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+            const timeLeft = endOfDay - now;
+
+            const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `Offer ends in: ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Add scroll reveal animation
+        const revealElements = document.querySelectorAll('h2, .package, .testimonial, .guarantee, .image-container, .faq-item');
+        const revealOptions = {
+            delay: 200,
+            distance: '50px',
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 0,
+            opacity: 0,
+            origin: 'bottom',
+            scale: 1
+        };
+
+        ScrollReveal().reveal(revealElements, revealOptions);
+
+        // Parallax effect for background image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const bgImage = document.querySelector('.bg-image');
+            bgImage.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+        });
+
+        // Email signup functionality
+        const emailSignup = document.querySelector('.email-signup');
+        const emailInput = emailSignup.querySelector('input[type="email"]');
+        const signupButton = emailSignup.querySelector('button');
+
+        signupButton.addEventListener('click', () => {
+            const email = emailInput.value.trim();
+            if (email && /^\S+@\S+\.\S+$/.test(email)) {
+                alert(`Thank you for signing up with email: ${email}`);
+                emailInput.value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</body>
+</html>
